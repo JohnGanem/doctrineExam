@@ -16,7 +16,7 @@ Note:
             type: float
             nullable: false
             column: note
-    manyToMany:
+    manyToOne:
         salarie: 
             targetEntity: salarie
             mappedBy: note

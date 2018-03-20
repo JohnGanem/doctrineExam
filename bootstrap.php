@@ -11,7 +11,7 @@ $dbParams = array(
     'driver'   => 'pdo_mysql',  
     'user'     => 'root',
     'password' => '',
-    'dbname'   => 'cinema',
+    'dbname'   => 'doctrineexam',
 );
 
 $config = Setup::createYAMLMetadataConfiguration([realpath(__DIR__."/mappings")], /* isDevMode */ true);

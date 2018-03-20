@@ -11,7 +11,7 @@ Inscription:
             column: id_inscription
             generator:
                 strategy: IDENTITY
-    manyToMany:
+    manyToOne:
         salarie: 
             targetEntity: salarie
             mappedBy: inscription

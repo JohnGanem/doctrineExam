@@ -11,7 +11,7 @@ Presence:
             column: id_presence
             generator:
                 strategy: IDENTITY
-    manyToMany:
+    manyToOne:
         salarie: 
             targetEntity: salarie
             mappedBy: presence
