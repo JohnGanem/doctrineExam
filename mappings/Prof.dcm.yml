@@ -19,4 +19,8 @@ Prof:
             options:
                 fixed: false
             column: nom
+    oneToMany:
+        session:
+            targetEntity: session
+            mappedBy: prof
     lifecycleCallbacks: {  }

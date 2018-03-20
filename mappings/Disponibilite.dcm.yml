@@ -16,4 +16,8 @@ Disponibilite:
             type: datetime
             nullable: false
             column: creneau_disponible
+    oneToMany:
+        session:
+            targetEntity: session
+            mappedBy: disponibilite
     lifecycleCallbacks: {  }

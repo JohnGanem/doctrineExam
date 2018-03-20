@@ -26,4 +26,8 @@ Salle:
             options:
                 fixed: false
             column: emplacement
+    oneToMany:
+        session:
+            targetEntity: session
+            mappedBy: salle
     lifecycleCallbacks: {  }

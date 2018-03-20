@@ -25,4 +25,8 @@ Formation:
             options:
                 unsigned: false
             column: nb_heure
+    oneToMany:
+        session:
+            targetEntity: session
+            mappedBy: formation
     lifecycleCallbacks: {  }
