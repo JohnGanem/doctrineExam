@@ -20,7 +20,13 @@ Note:
         salarie: 
             targetEntity: salarie
             mappedBy: note
+            joinColumns:
+                id_salarie:
+                    referencedColumnName: id_salarie
         session: 
             targetEntity: session
             mappedBy: note
+            joinColumns:
+                id_session:
+                    referencedColumnName: id_session
     lifecycleCallbacks: {  }

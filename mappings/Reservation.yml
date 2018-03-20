@@ -1,21 +1,27 @@
-Presence:
+Reservation:
     type: entity
-    table: presence
+    table: reservation
     id:
-        idPresence:
+        idReservation:
             type: integer
             nullable: false
             options:
                 unsigned: false
             id: true
-            column: id_presence
+            column: id_reservation
             generator:
                 strategy: IDENTITY
     manyToOne:
-        salarie: 
-            targetEntity: salarie
-            mappedBy: presence
-        session: 
-            targetEntity: session
-            mappedBy: presence
+        prof: 
+            targetEntity: prof
+            mappedBy: reservation
+            joinColumns:
+                id_prof:
+                    referencedColumnName: id_prof
+        disponibilite: 
+            targetEntity: disponibilite
+            mappedBy: reservation
+            joinColumns:
+                id_disponibilite:
+                    referencedColumnName: id_disponibilite
     lifecycleCallbacks: {  }

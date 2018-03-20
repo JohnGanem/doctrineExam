@@ -20,7 +20,10 @@ Salarie:
                 fixed: false
             column: nom
     oneToMany:
-        films:
+        entreprise:
             targetEntity: entreprise
+            mappedBy: salarie  
+        inscription:
+            targetEntity: inscription
             mappedBy: salarie  
     lifecycleCallbacks: {  }

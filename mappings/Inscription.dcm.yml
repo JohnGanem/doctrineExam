@@ -4,7 +4,7 @@ Inscription:
     id:
         idInscription:
             type: integer
-            nullable: false
+            nullable: true
             options:
                 unsigned: false
             id: true
@@ -12,10 +12,16 @@ Inscription:
             generator:
                 strategy: IDENTITY
     manyToOne:
-        salarie: 
+        salarie:
             targetEntity: salarie
             mappedBy: inscription
+            joinColumns:
+                id_salarie:
+                    referencedColumnName: id_salarie
         formation: 
             targetEntity: formation
             mappedBy: inscription
+            joinColumns:
+                id_formation:
+                    referencedColumnName: id_formation
     lifecycleCallbacks: {  }
