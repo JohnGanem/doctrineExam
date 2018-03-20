@@ -20,14 +20,20 @@ class Salarie
     /**
      * @var \Doctrine\Common\Collections\Collection
      */
-    private $films;
+    private $entreprise;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $inscription;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->films = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->entreprise = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->inscription = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -65,38 +71,74 @@ class Salarie
     }
 
     /**
-     * Add film.
+     * Add entreprise.
      *
-     * @param \entreprise $film
+     * @param \entreprise $entreprise
      *
      * @return Salarie
      */
-    public function addFilm(\entreprise $film)
+    public function addEntreprise(\entreprise $entreprise)
     {
-        $this->films[] = $film;
+        $this->entreprise[] = $entreprise;
 
         return $this;
     }
 
     /**
-     * Remove film.
+     * Remove entreprise.
      *
-     * @param \entreprise $film
+     * @param \entreprise $entreprise
      *
      * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
      */
-    public function removeFilm(\entreprise $film)
+    public function removeEntreprise(\entreprise $entreprise)
     {
-        return $this->films->removeElement($film);
+        return $this->entreprise->removeElement($entreprise);
     }
 
     /**
-     * Get films.
+     * Get entreprise.
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getFilms()
+    public function getEntreprise()
     {
-        return $this->films;
+        return $this->entreprise;
+    }
+
+    /**
+     * Add inscription.
+     *
+     * @param \inscription $inscription
+     *
+     * @return Salarie
+     */
+    public function addInscription(\inscription $inscription)
+    {
+        $this->inscription[] = $inscription;
+
+        return $this;
+    }
+
+    /**
+     * Remove inscription.
+     *
+     * @param \inscription $inscription
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeInscription(\inscription $inscription)
+    {
+        return $this->inscription->removeElement($inscription);
+    }
+
+    /**
+     * Get inscription.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getInscription()
+    {
+        return $this->inscription;
     }
 }
