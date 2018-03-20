@@ -19,4 +19,8 @@ Salarie:
             options:
                 fixed: false
             column: nom
+    oneToMany:
+        films:
+            targetEntity: entreprise
+            mappedBy: salarie  
     lifecycleCallbacks: {  }
