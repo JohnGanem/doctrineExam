@@ -56,11 +56,4 @@ Session:
             joinColumns:
                 id_formation:
                     referencedColumnName: id_formation 
-    manyToMany:
-        salarie: 
-            targetEntity: session
-            mappedBy: salarie
-        note: 
-            targetEntity: session
-            mappedBy: note
     lifecycleCallbacks: {  }
