@@ -1,6 +1,6 @@
 Creneau:
     type: entity
-    table: membre
+    table: creneau
     id:
         idCreneau:
             type: integer

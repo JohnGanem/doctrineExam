@@ -1,6 +1,6 @@
 Entreprise:
     type: entity
-    table: membre
+    table: entreprise
     id:
         idEntreprise:
             type: integer

@@ -1,26 +1,21 @@
-Note:
+Presence:
     type: entity
-    table: note
+    table: presence
     id:
-        idNote:
+        idPresence:
             type: integer
             nullable: false
             options:
                 unsigned: false
             id: true
-            column: id_note
+            column: id_presence
             generator:
                 strategy: IDENTITY
-    fields:
-        note:
-            type: float
-            nullable: false
-            column: note
     manyToMany:
         salarie: 
             targetEntity: salarie
-            mappedBy: note
+            mappedBy: presence
         session: 
             targetEntity: session
-            mappedBy: note
+            mappedBy: presence
     lifecycleCallbacks: {  }

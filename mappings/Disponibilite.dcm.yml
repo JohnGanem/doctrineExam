@@ -1,6 +1,6 @@
 Disponibilite:
     type: entity
-    table: membre
+    table: disponibilite
     id:
         idDisponibilite:
             type: integer

@@ -1,26 +1,21 @@
-Note:
+Inscription:
     type: entity
-    table: note
+    table: inscription
     id:
-        idNote:
+        idInscription:
             type: integer
             nullable: false
             options:
                 unsigned: false
             id: true
-            column: id_note
+            column: id_inscription
             generator:
                 strategy: IDENTITY
-    fields:
-        note:
-            type: float
-            nullable: false
-            column: note
     manyToMany:
         salarie: 
             targetEntity: salarie
-            mappedBy: note
-        session: 
-            targetEntity: session
-            mappedBy: note
+            mappedBy: inscription
+        formation: 
+            targetEntity: formation
+            mappedBy: inscription
     lifecycleCallbacks: {  }

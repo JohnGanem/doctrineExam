@@ -1,6 +1,6 @@
 Formation:
     type: entity
-    table: membre
+    table: formation
     id:
         idFormation:
             type: integer
