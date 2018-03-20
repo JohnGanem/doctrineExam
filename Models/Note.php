@@ -18,23 +18,15 @@ class Note
     private $note;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
+     * @var \salarie
      */
     private $salarie;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
+     * @var \session
      */
     private $session;
 
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->salarie = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->session = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Get idNote.
@@ -71,35 +63,23 @@ class Note
     }
 
     /**
-     * Add salarie.
+     * Set salarie.
      *
-     * @param \salarie $salarie
+     * @param \salarie|null $salarie
      *
      * @return Note
      */
-    public function addSalarie(\salarie $salarie)
+    public function setSalarie(\salarie $salarie = null)
     {
-        $this->salarie[] = $salarie;
+        $this->salarie = $salarie;
 
         return $this;
     }
 
     /**
-     * Remove salarie.
-     *
-     * @param \salarie $salarie
-     *
-     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
-     */
-    public function removeSalarie(\salarie $salarie)
-    {
-        return $this->salarie->removeElement($salarie);
-    }
-
-    /**
      * Get salarie.
      *
-     * @return \Doctrine\Common\Collections\Collection
+     * @return \salarie|null
      */
     public function getSalarie()
     {
@@ -107,35 +87,23 @@ class Note
     }
 
     /**
-     * Add session.
+     * Set session.
      *
-     * @param \session $session
+     * @param \session|null $session
      *
      * @return Note
      */
-    public function addSession(\session $session)
+    public function setSession(\session $session = null)
     {
-        $this->session[] = $session;
+        $this->session = $session;
 
         return $this;
     }
 
     /**
-     * Remove session.
-     *
-     * @param \session $session
-     *
-     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
-     */
-    public function removeSession(\session $session)
-    {
-        return $this->session->removeElement($session);
-    }
-
-    /**
      * Get session.
      *
-     * @return \Doctrine\Common\Collections\Collection
+     * @return \session|null
      */
     public function getSession()
     {

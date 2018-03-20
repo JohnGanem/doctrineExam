@@ -47,6 +47,24 @@ class Session
      */
     private $formation;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $salarie;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $note;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->salarie = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->note = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get idSession.
@@ -224,5 +242,77 @@ class Session
     public function getFormation()
     {
         return $this->formation;
+    }
+
+    /**
+     * Add salarie.
+     *
+     * @param \session $salarie
+     *
+     * @return Session
+     */
+    public function addSalarie(\session $salarie)
+    {
+        $this->salarie[] = $salarie;
+
+        return $this;
+    }
+
+    /**
+     * Remove salarie.
+     *
+     * @param \session $salarie
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeSalarie(\session $salarie)
+    {
+        return $this->salarie->removeElement($salarie);
+    }
+
+    /**
+     * Get salarie.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSalarie()
+    {
+        return $this->salarie;
+    }
+
+    /**
+     * Add note.
+     *
+     * @param \session $note
+     *
+     * @return Session
+     */
+    public function addNote(\session $note)
+    {
+        $this->note[] = $note;
+
+        return $this;
+    }
+
+    /**
+     * Remove note.
+     *
+     * @param \session $note
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeNote(\session $note)
+    {
+        return $this->note->removeElement($note);
+    }
+
+    /**
+     * Get note.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getNote()
+    {
+        return $this->note;
     }
 }

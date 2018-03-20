@@ -13,23 +13,15 @@ class Inscription
     private $idInscription;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
+     * @var \salarie
      */
     private $salarie;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
+     * @var \formation
      */
     private $formation;
 
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->salarie = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->formation = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Get idInscription.
@@ -42,35 +34,23 @@ class Inscription
     }
 
     /**
-     * Add salarie.
+     * Set salarie.
      *
-     * @param \salarie $salarie
+     * @param \salarie|null $salarie
      *
      * @return Inscription
      */
-    public function addSalarie(\salarie $salarie)
+    public function setSalarie(\salarie $salarie = null)
     {
-        $this->salarie[] = $salarie;
+        $this->salarie = $salarie;
 
         return $this;
     }
 
     /**
-     * Remove salarie.
-     *
-     * @param \salarie $salarie
-     *
-     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
-     */
-    public function removeSalarie(\salarie $salarie)
-    {
-        return $this->salarie->removeElement($salarie);
-    }
-
-    /**
      * Get salarie.
      *
-     * @return \Doctrine\Common\Collections\Collection
+     * @return \salarie|null
      */
     public function getSalarie()
     {
@@ -78,35 +58,23 @@ class Inscription
     }
 
     /**
-     * Add formation.
+     * Set formation.
      *
-     * @param \formation $formation
+     * @param \formation|null $formation
      *
      * @return Inscription
      */
-    public function addFormation(\formation $formation)
+    public function setFormation(\formation $formation = null)
     {
-        $this->formation[] = $formation;
+        $this->formation = $formation;
 
         return $this;
     }
 
     /**
-     * Remove formation.
-     *
-     * @param \formation $formation
-     *
-     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
-     */
-    public function removeFormation(\formation $formation)
-    {
-        return $this->formation->removeElement($formation);
-    }
-
-    /**
      * Get formation.
      *
-     * @return \Doctrine\Common\Collections\Collection
+     * @return \formation|null
      */
     public function getFormation()
     {
