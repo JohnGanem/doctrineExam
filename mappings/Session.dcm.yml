@@ -57,5 +57,10 @@ Session:
             joinColumns:
                 id_prof:
                     referencedColumnName: id_prof 
-
+        formation:
+            targetEntity: formation
+            inversedBy: session
+            joinColumns:
+                id_formation:
+                    referencedColumnName: id_formation 
     lifecycleCallbacks: {  }
