@@ -1,0 +1,21 @@
+Inscription:
+    type: entity
+    table: inscription
+    id:
+        idInscription:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_inscription
+            generator:
+                strategy: IDENTITY
+    manyToMany:
+        salarie: 
+            targetEntity: salarie
+            mappedBy: inscription
+        formation: 
+            targetEntity: formation
+            mappedBy: inscription
+    lifecycleCallbacks: {  }

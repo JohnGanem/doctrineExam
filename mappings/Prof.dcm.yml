@@ -1,6 +1,6 @@
 Prof:
     type: entity
-    table: membre
+    table: prof
     id:
         idProf:
             type: integer

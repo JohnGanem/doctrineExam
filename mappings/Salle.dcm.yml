@@ -1,6 +1,6 @@
 Salle:
     type: entity
-    table: membre
+    table: salle
     id:
         idSalle:
             type: integer

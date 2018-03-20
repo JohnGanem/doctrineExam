@@ -1,6 +1,6 @@
 Formation:
     type: entity
-    table: membre
+    table: formation
     id:
         idFormation:
             type: integer
@@ -25,10 +25,4 @@ Formation:
             options:
                 unsigned: false
             column: nb_heure
-        idProf:
-            type: integer
-            nullable: false
-            options:
-                unsigned: false
-            column: id_prof
     lifecycleCallbacks: {  }

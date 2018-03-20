@@ -1,0 +1,21 @@
+Presence:
+    type: entity
+    table: presence
+    id:
+        idPresence:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_presence
+            generator:
+                strategy: IDENTITY
+    manyToMany:
+        salarie: 
+            targetEntity: salarie
+            mappedBy: presence
+        session: 
+            targetEntity: session
+            mappedBy: presence
+    lifecycleCallbacks: {  }

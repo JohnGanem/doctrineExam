@@ -1,22 +1,19 @@
-Entreprise:
+Disponibilite:
     type: entity
-    table: entreprise
+    table: disponibilite
     id:
-        idEntreprise:
+        idDisponibilite:
             type: integer
             nullable: false
             options:
                 unsigned: false
             id: true
-            column: id_entreprise
+            column: id_disponibilite
             generator:
                 strategy: IDENTITY
     fields:
-        nom:
-            type: string
+        creneauDisponible:
+            type: datetime
             nullable: false
-            length: 255
-            options:
-                fixed: false
-            column: nom
+            column: creneau_disponible
     lifecycleCallbacks: {  }
