@@ -25,6 +25,10 @@ Formation:
             options:
                 unsigned: false
             column: nb_heure
+        idProf:
+            type: integer
+            nullable: false
+            column: id_prof
     oneToMany:
         session:
             targetEntity: session

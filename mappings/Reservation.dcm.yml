@@ -11,6 +11,15 @@ Reservation:
             column: id_reservation
             generator:
                 strategy: IDENTITY
+    fields:
+        idProf:
+            type: integer
+            nullable: false
+            column: id_prof
+        idDisponibilite:
+            type: integer
+            nullable: false
+            column: id_disponibilite
     manyToOne:
         prof: 
             targetEntity: prof

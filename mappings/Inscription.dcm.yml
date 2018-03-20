@@ -11,6 +11,15 @@ Inscription:
             column: id_inscription
             generator:
                 strategy: IDENTITY
+    fields:
+        idFormation:
+            type: integer
+            nullable: false
+            column: id_formation
+        idSalarie:
+            type: integer
+            nullable: false
+            column: id_salarie
     manyToOne:
         salarie:
             targetEntity: salarie

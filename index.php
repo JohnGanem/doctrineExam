@@ -7,12 +7,26 @@
     <body>
         <?php
         require_once './bootstrap.php';
-        
-        
-//
-//        $film = $entityManager->find('\Film', 3631);
-//        $genre = $film->getGenre();
-//        $distributeur = $film->getDistributeur();
+        $queryBuilder = $entityManager->createQueryBuilder();
+        $id_salarie = 2;
+
+        $query = $queryBuilder->select('f')
+                ->from('Note', 'f')
+                ->where('f.idSalarie = :id_salarie')
+                ->setParameter('id_salarie', $id_salarie);
+
+        $query = $queryBuilder->getQuery();
+
+        $results = $query->getResult();
+
+
+
+
+        $note = new Note;
+
+
+        var_dump($results);
+
 //
 //        $genre->getNom();
 //        $distributeur->getNom();

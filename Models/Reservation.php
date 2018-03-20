@@ -80,4 +80,62 @@ class Reservation
     {
         return $this->disponibilite;
     }
+    /**
+     * @var int
+     */
+    private $idProf;
+
+    /**
+     * @var int
+     */
+    private $idDisponibilite;
+
+
+    /**
+     * Set idProf.
+     *
+     * @param int $idProf
+     *
+     * @return Reservation
+     */
+    public function setIdProf($idProf)
+    {
+        $this->idProf = $idProf;
+
+        return $this;
+    }
+
+    /**
+     * Get idProf.
+     *
+     * @return int
+     */
+    public function getIdProf()
+    {
+        return $this->idProf;
+    }
+
+    /**
+     * Set idDisponibilite.
+     *
+     * @param int $idDisponibilite
+     *
+     * @return Reservation
+     */
+    public function setIdDisponibilite($idDisponibilite)
+    {
+        $this->idDisponibilite = $idDisponibilite;
+
+        return $this;
+    }
+
+    /**
+     * Get idDisponibilite.
+     *
+     * @return int
+     */
+    public function getIdDisponibilite()
+    {
+        return $this->idDisponibilite;
+    }
 }

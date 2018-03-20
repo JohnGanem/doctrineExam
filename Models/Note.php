@@ -109,4 +109,77 @@ class Note
     {
         return $this->session;
     }
+    
+    public function getSessionFromSalarie($id_salarie){
+        $queryBuilder = $this->_em->createQueryBuilder();
+
+        $query = $queryBuilder->select('f')
+            ->from('Note', 'f')
+            ->where('n.id_salarie = :id_salarie')
+            ->setParameter('id_salarie', $id_salarie);
+
+        $query = $queryBuilder->getQuery();
+
+        $results = $query->getResult();
+
+        return $results;
+    }
+    /**
+     * @var int
+     */
+    private $idSalarie;
+
+
+    /**
+     * Set idSalarie.
+     *
+     * @param int $idSalarie
+     *
+     * @return Note
+     */
+    public function setIdSalarie($idSalarie)
+    {
+        $this->idSalarie = $idSalarie;
+
+        return $this;
+    }
+
+    /**
+     * Get idSalarie.
+     *
+     * @return int
+     */
+    public function getIdSalarie()
+    {
+        return $this->idSalarie;
+    }
+    /**
+     * @var int
+     */
+    private $idSession;
+
+
+    /**
+     * Set idSession.
+     *
+     * @param int $idSession
+     *
+     * @return Note
+     */
+    public function setIdSession($idSession)
+    {
+        $this->idSession = $idSession;
+
+        return $this;
+    }
+
+    /**
+     * Get idSession.
+     *
+     * @return int
+     */
+    public function getIdSession()
+    {
+        return $this->idSession;
+    }
 }

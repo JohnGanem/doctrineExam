@@ -128,4 +128,33 @@ class Salarie
     {
         return $this->entreprise;
     }
+    /**
+     * @var int
+     */
+    private $idEntreprise;
+
+
+    /**
+     * Set idEntreprise.
+     *
+     * @param int $idEntreprise
+     *
+     * @return Salarie
+     */
+    public function setIdEntreprise($idEntreprise)
+    {
+        $this->idEntreprise = $idEntreprise;
+
+        return $this;
+    }
+
+    /**
+     * Get idEntreprise.
+     *
+     * @return int
+     */
+    public function getIdEntreprise()
+    {
+        return $this->idEntreprise;
+    }
 }

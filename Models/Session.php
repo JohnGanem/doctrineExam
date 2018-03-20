@@ -23,7 +23,7 @@ class Session
     private $prix;
 
     /**
-     * @var int
+     * @var string|null
      */
     private $compteRendu;
 
@@ -109,11 +109,11 @@ class Session
     /**
      * Set compteRendu.
      *
-     * @param int $compteRendu
+     * @param string|null $compteRendu
      *
      * @return Session
      */
-    public function setCompteRendu($compteRendu)
+    public function setCompteRendu($compteRendu = null)
     {
         $this->compteRendu = $compteRendu;
 
@@ -123,7 +123,7 @@ class Session
     /**
      * Get compteRendu.
      *
-     * @return int
+     * @return string|null
      */
     public function getCompteRendu()
     {
@@ -224,5 +224,121 @@ class Session
     public function getFormation()
     {
         return $this->formation;
+    }
+    /**
+     * @var int
+     */
+    private $idSalle;
+
+    /**
+     * @var int
+     */
+    private $idDisponibilite;
+
+    /**
+     * @var int
+     */
+    private $idProf;
+
+    /**
+     * @var int
+     */
+    private $idFormation;
+
+
+    /**
+     * Set idSalle.
+     *
+     * @param int $idSalle
+     *
+     * @return Session
+     */
+    public function setIdSalle($idSalle)
+    {
+        $this->idSalle = $idSalle;
+
+        return $this;
+    }
+
+    /**
+     * Get idSalle.
+     *
+     * @return int
+     */
+    public function getIdSalle()
+    {
+        return $this->idSalle;
+    }
+
+    /**
+     * Set idDisponibilite.
+     *
+     * @param int $idDisponibilite
+     *
+     * @return Session
+     */
+    public function setIdDisponibilite($idDisponibilite)
+    {
+        $this->idDisponibilite = $idDisponibilite;
+
+        return $this;
+    }
+
+    /**
+     * Get idDisponibilite.
+     *
+     * @return int
+     */
+    public function getIdDisponibilite()
+    {
+        return $this->idDisponibilite;
+    }
+
+    /**
+     * Set idProf.
+     *
+     * @param int $idProf
+     *
+     * @return Session
+     */
+    public function setIdProf($idProf)
+    {
+        $this->idProf = $idProf;
+
+        return $this;
+    }
+
+    /**
+     * Get idProf.
+     *
+     * @return int
+     */
+    public function getIdProf()
+    {
+        return $this->idProf;
+    }
+
+    /**
+     * Set idFormation.
+     *
+     * @param int $idFormation
+     *
+     * @return Session
+     */
+    public function setIdFormation($idFormation)
+    {
+        $this->idFormation = $idFormation;
+
+        return $this;
+    }
+
+    /**
+     * Get idFormation.
+     *
+     * @return int
+     */
+    public function getIdFormation()
+    {
+        return $this->idFormation;
     }
 }

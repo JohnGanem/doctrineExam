@@ -19,6 +19,10 @@ Salarie:
             options:
                 fixed: false
             column: nom
+        idEntreprise:
+            type: integer
+            nullable: false
+            column: id_entreprise
     oneToMany:
         inscription:
             targetEntity: inscription

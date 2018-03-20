@@ -16,6 +16,14 @@ Note:
             type: float
             nullable: false
             column: note
+        idSalarie:
+            type: integer
+            nullable: false
+            column: id_salarie
+        idSession:
+            type: integer
+            nullable: false
+            column: id_session
     manyToOne:
         salarie: 
             targetEntity: salarie

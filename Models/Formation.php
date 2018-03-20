@@ -28,6 +28,11 @@ class Formation
     private $session;
 
     /**
+     * @var \prof
+     */
+    private $prof;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -128,11 +133,6 @@ class Formation
     {
         return $this->session;
     }
-    /**
-     * @var \prof
-     */
-    private $prof;
-
 
     /**
      * Set prof.
@@ -156,5 +156,34 @@ class Formation
     public function getProf()
     {
         return $this->prof;
+    }
+    /**
+     * @var int
+     */
+    private $idProf;
+
+
+    /**
+     * Set idProf.
+     *
+     * @param int $idProf
+     *
+     * @return Formation
+     */
+    public function setIdProf($idProf)
+    {
+        $this->idProf = $idProf;
+
+        return $this;
+    }
+
+    /**
+     * Get idProf.
+     *
+     * @return int
+     */
+    public function getIdProf()
+    {
+        return $this->idProf;
     }
 }

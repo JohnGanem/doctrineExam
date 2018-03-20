@@ -32,6 +32,22 @@ Session:
             options:
                 unsigned: false
             column: compte_rendu
+        idSalle:
+            type: integer
+            nullable: false
+            column: id_salle
+        idDisponibilite:
+            type: integer
+            nullable: false
+            column: id_disponibilite
+        idProf:
+            type: integer
+            nullable: false
+            column: id_prof
+        idFormation:
+            type: integer
+            nullable: false
+            column: id_formation
     manyToOne:
         salle:
             targetEntity: salle
