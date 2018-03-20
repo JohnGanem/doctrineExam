@@ -30,9 +30,8 @@ Session:
             nullable: false
             options:
                 unsigned: false
-            column: compteRendu
-
-      manyToOne:
+            column: compte_rendu
+    manyToOne:
         salle:
             targetEntity: salle
             inversedBy: session
@@ -51,12 +50,6 @@ Session:
             joinColumns:
                 id_prof:
                     referencedColumnName: id_prof  
-        prof:
-            targetEntity: prof
-            inversedBy: session
-            joinColumns:
-                id_prof:
-                    referencedColumnName: id_prof 
         formation:
             targetEntity: formation
             inversedBy: session
