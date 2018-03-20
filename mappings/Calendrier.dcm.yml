@@ -1,0 +1,19 @@
+Disponibilite:
+    type: entity
+    table: membre
+    id:
+        idDisponibilite:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_disponibilite
+            generator:
+                strategy: IDENTITY
+    fields:
+        creneauDisponible:
+            type: datetime
+            nullable: false
+            column: creneau_disponible
+    lifecycleCallbacks: {  }

@@ -1,14 +1,14 @@
-Creneaux:
+Creneau:
     type: entity
     table: membre
     id:
-        idCreneaux:
+        idCreneau:
             type: integer
             nullable: false
             options:
                 unsigned: false
             id: true
-            column: id_creneaux
+            column: id_creneau
             generator:
                 strategy: IDENTITY
     fields:

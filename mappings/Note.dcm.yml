@@ -1,0 +1,19 @@
+Note:
+    type: entity
+    table: membre
+    id:
+        idNote:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_note
+            generator:
+                strategy: IDENTITY
+    fields:
+        note:
+            type: float
+            nullable: false
+            column: note
+    lifecycleCallbacks: {  }
