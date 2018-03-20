@@ -22,6 +22,18 @@ class Formation
      */
     private $nbHeure;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $session;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->session = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get idFormation.
@@ -79,5 +91,41 @@ class Formation
     public function getNbHeure()
     {
         return $this->nbHeure;
+    }
+
+    /**
+     * Add session.
+     *
+     * @param \session $session
+     *
+     * @return Formation
+     */
+    public function addSession(\session $session)
+    {
+        $this->session[] = $session;
+
+        return $this;
+    }
+
+    /**
+     * Remove session.
+     *
+     * @param \session $session
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeSession(\session $session)
+    {
+        return $this->session->removeElement($session);
+    }
+
+    /**
+     * Get session.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSession()
+    {
+        return $this->session;
     }
 }

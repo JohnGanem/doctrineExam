@@ -17,6 +17,18 @@ class Disponibilite
      */
     private $creneauDisponible;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $session;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->session = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get idDisponibilite.
@@ -50,5 +62,41 @@ class Disponibilite
     public function getCreneauDisponible()
     {
         return $this->creneauDisponible;
+    }
+
+    /**
+     * Add session.
+     *
+     * @param \session $session
+     *
+     * @return Disponibilite
+     */
+    public function addSession(\session $session)
+    {
+        $this->session[] = $session;
+
+        return $this;
+    }
+
+    /**
+     * Remove session.
+     *
+     * @param \session $session
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeSession(\session $session)
+    {
+        return $this->session->removeElement($session);
+    }
+
+    /**
+     * Get session.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSession()
+    {
+        return $this->session;
     }
 }
