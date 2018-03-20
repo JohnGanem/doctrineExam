@@ -30,9 +30,9 @@ Session:
             nullable: false
             options:
                 unsigned: false
-            column: compteRendu
+            column: compte_rendu
 
-      manyToOne:
+    manyToOne:
         salle:
             targetEntity: salle
             inversedBy: session
@@ -51,16 +51,17 @@ Session:
             joinColumns:
                 id_prof:
                     referencedColumnName: id_prof  
-        prof:
-            targetEntity: prof
-            inversedBy: session
-            joinColumns:
-                id_prof:
-                    referencedColumnName: id_prof 
         formation:
             targetEntity: formation
             inversedBy: session
             joinColumns:
                 id_formation:
                     referencedColumnName: id_formation 
+    manyToMany:
+        salarie: 
+            targetEntity: session
+            mappedBy: salarie
+        note: 
+            targetEntity: session
+            mappedBy: note
     lifecycleCallbacks: {  }
