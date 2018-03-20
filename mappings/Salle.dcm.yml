@@ -1,0 +1,29 @@
+Salle:
+    type: entity
+    table: membre
+    id:
+        idSalle:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_salle
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomSalle:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: nom_salle
+        emplacement:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: emplacement
+    lifecycleCallbacks: {  }

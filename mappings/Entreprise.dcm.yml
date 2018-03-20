@@ -1,0 +1,22 @@
+Entreprise:
+    type: entity
+    table: membre
+    id:
+        idEntreprise:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_entreprise
+            generator:
+                strategy: IDENTITY
+    fields:
+        nom:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: nom
+    lifecycleCallbacks: {  }

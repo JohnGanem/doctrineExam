@@ -1,0 +1,29 @@
+Creneaux:
+    type: entity
+    table: membre
+    id:
+        idCreneaux:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_creneaux
+            generator:
+                strategy: IDENTITY
+    fields:
+        jourSemaine:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: jour_semaine
+        horaires:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: horaires
+    lifecycleCallbacks: {  }

@@ -1,0 +1,22 @@
+Prof:
+    type: entity
+    table: membre
+    id:
+        idProf:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_prof
+            generator:
+                strategy: IDENTITY
+    fields:
+        nom:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: nom
+    lifecycleCallbacks: {  }
