@@ -17,6 +17,18 @@ class Entreprise
      */
     private $nom;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $salarie;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->salarie = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get idEntreprise.
@@ -50,18 +62,6 @@ class Entreprise
     public function getNom()
     {
         return $this->nom;
-    }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $salarie;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->salarie = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**

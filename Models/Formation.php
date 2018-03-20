@@ -128,4 +128,33 @@ class Formation
     {
         return $this->session;
     }
+    /**
+     * @var \prof
+     */
+    private $prof;
+
+
+    /**
+     * Set prof.
+     *
+     * @param \prof|null $prof
+     *
+     * @return Formation
+     */
+    public function setProf(\prof $prof = null)
+    {
+        $this->prof = $prof;
+
+        return $this;
+    }
+
+    /**
+     * Get prof.
+     *
+     * @return \prof|null
+     */
+    public function getProf()
+    {
+        return $this->prof;
+    }
 }

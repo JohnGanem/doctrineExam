@@ -20,19 +20,18 @@ class Salarie
     /**
      * @var \Doctrine\Common\Collections\Collection
      */
-    private $entreprise;
+    private $inscription;
 
     /**
-     * @var \Doctrine\Common\Collections\Collection
+     * @var \entreprise
      */
-    private $inscription;
+    private $entreprise;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->entreprise = new \Doctrine\Common\Collections\ArrayCollection();
         $this->inscription = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
@@ -68,42 +67,6 @@ class Salarie
     public function getNom()
     {
         return $this->nom;
-    }
-
-    /**
-     * Add entreprise.
-     *
-     * @param \entreprise $entreprise
-     *
-     * @return Salarie
-     */
-    public function addEntreprise(\entreprise $entreprise)
-    {
-        $this->entreprise[] = $entreprise;
-
-        return $this;
-    }
-
-    /**
-     * Remove entreprise.
-     *
-     * @param \entreprise $entreprise
-     *
-     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
-     */
-    public function removeEntreprise(\entreprise $entreprise)
-    {
-        return $this->entreprise->removeElement($entreprise);
-    }
-
-    /**
-     * Get entreprise.
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getEntreprise()
-    {
-        return $this->entreprise;
     }
 
     /**
@@ -154,5 +117,15 @@ class Salarie
         $this->entreprise = $entreprise;
 
         return $this;
+    }
+
+    /**
+     * Get entreprise.
+     *
+     * @return \entreprise|null
+     */
+    public function getEntreprise()
+    {
+        return $this->entreprise;
     }
 }

@@ -29,4 +29,11 @@ Formation:
         session:
             targetEntity: session
             mappedBy: formation
+    manyToOne:
+        prof:
+            targetEntity: prof
+            inversedBy: formation
+            joinColumns:
+                id_prof:
+                    referencedColumnName: id_prof
     lifecycleCallbacks: {  }

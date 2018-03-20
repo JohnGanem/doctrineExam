@@ -26,8 +26,9 @@ Session:
                 unsigned: false
             column: prix
         compteRendu:
-            type: integer
-            nullable: false
+            type: string
+            nullable: true
+            length: 255
             options:
                 unsigned: false
             column: compte_rendu
