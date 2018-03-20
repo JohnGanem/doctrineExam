@@ -20,10 +20,14 @@ Salarie:
                 fixed: false
             column: nom
     oneToMany:
-        entreprise:
-            targetEntity: entreprise
-            mappedBy: salarie  
         inscription:
             targetEntity: inscription
-            mappedBy: salarie  
+            mappedBy: salarie
+    manyToOne:
+        entreprise:
+            targetEntity: entreprise
+            inversedBy: salarie
+            joinColumns:
+                id_entreprise:
+                    referencedColumnName: id_entreprise
     lifecycleCallbacks: {  }

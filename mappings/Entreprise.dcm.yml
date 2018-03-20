@@ -19,4 +19,8 @@ Entreprise:
             options:
                 fixed: false
             column: nom
+    oneToMany:
+        salarie:
+            targetEntity: salarie
+            mappedBy: entreprise  
     lifecycleCallbacks: {  }

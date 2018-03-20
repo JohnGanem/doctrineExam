@@ -51,4 +51,52 @@ class Entreprise
     {
         return $this->nom;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $salarie;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->salarie = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add salarie.
+     *
+     * @param \salarie $salarie
+     *
+     * @return Entreprise
+     */
+    public function addSalarie(\salarie $salarie)
+    {
+        $this->salarie[] = $salarie;
+
+        return $this;
+    }
+
+    /**
+     * Remove salarie.
+     *
+     * @param \salarie $salarie
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeSalarie(\salarie $salarie)
+    {
+        return $this->salarie->removeElement($salarie);
+    }
+
+    /**
+     * Get salarie.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSalarie()
+    {
+        return $this->salarie;
+    }
 }

@@ -141,4 +141,18 @@ class Salarie
     {
         return $this->inscription;
     }
+
+    /**
+     * Set entreprise.
+     *
+     * @param \entreprise|null $entreprise
+     *
+     * @return Salarie
+     */
+    public function setEntreprise(\entreprise $entreprise = null)
+    {
+        $this->entreprise = $entreprise;
+
+        return $this;
+    }
 }
